@@ -12,10 +12,11 @@ io.on('connection', function(socket){
     console.log('user disconnected');
   });
   socket.on('chat message', function(msg){
-    // console.log('message: ' + msg);
-    io.emit('chat messssage', msg);
+    io.emit('chat message', msg);
   });
 });
+
+
 
 http.listen(3000, function(){
   console.log('listening on *:3000');
